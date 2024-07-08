@@ -1,0 +1,189 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .workspace {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            background:#b68cb8 ;
+            color: white;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .sidebar a.active {
+            background:  #b68cb8;
+        }
+        .sidebar a:hover {
+            background: #d9c1db;
+        }
+        .sidebar a:last-child {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .search-bar {
+            float: right;
+            margin-top: 20px;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            background-color: #eaeaea;
+            border-radius: 10px;
+            position: relative;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .profile-details {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        .profile-details div {
+            margin-bottom: 20px;
+        }
+        .profile-details label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .profile-details input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .edit-button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .edit-button img {
+            width: 20px;
+            height: 20px;
+        }
+        .profile-details .save-cancel-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .save-button, .cancel-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .save-button {
+            background-color: #4caf50;
+            color: white;
+        }
+        .cancel-button {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="workspace">
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Customers</a>
+            <a href="#">Departments</a>
+            <a href="#">Media</a>
+            <a href="#" class="active">My Account</a>
+            
+
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search in My Account">
+            </div>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="placeholder.png" alt="Profile Picture">
+                    <div class="edit-button">
+                        <img src="edit-icon.png" alt="Edit">
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" value="John Doe">
+                        <div class="edit-button">
+                            <img src="edit-icon.png" alt="Edit">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" value="example@gmail.com">
+                        <div class="edit-button">
+                            <img src="edit-icon.png" alt="Edit">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" value="9134837948">
+                        <div class="edit-button">
+                            <img src="edit-icon.png" alt="Edit">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="dob">Date of Birth</label>
+                        <input type="text" id="dob" value="July 16, 1999">
+                        <div class="edit-button">
+                            <img src="edit-icon.png" alt="Edit">
+                        </div>
+                    </div>
+                    <div class="save-cancel-buttons">
+                        <button class="save-button">SAVE</button>
+                        <button class="cancel-button">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

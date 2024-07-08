@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .workspace {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 200px;
+            background: #d9c1db;
+            color: white;
+            float: left;
+            height: 100vh;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .sidebar a.active {
+            background: #b68cb8;
+        }
+        .sidebar a:hover {
+            background: #b68cb8 ;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        .search-bar {
+            float: right;
+            margin-top: 20px;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .media-section {
+            margin-top: 20px;
+        }
+        .media-section h2 {
+            background: #f4e3b2;
+            padding: 10px;
+            margin: 0 -20px;
+            font-size: 20px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 20px 0;
+        }
+        .media-grid img {
+            width: 100px;
+            height: 100px;
+            background-color: #eaeaea;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="workspace">
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Customers</a>
+            <a href="#">Departments</a>
+            <a href="#" class="active">Media</a>
+            <a href="#" class="active">My Account</a>
+
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search in Media">
+            </div>
+            <div class="media-section">
+                <h2>IMAGES</h2>
+                <div class="media-grid">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                </div>
+            </div>
+            <div class="media-section">
+                <h2>VIDEO</h2>
+                <div class="media-grid">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                </div>
+            </div>
+            <div class="media-section">
+                <h2>AUDIO</h2>
+                <div class="media-grid">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                    <img src="placeholder.png" alt="Placeholder">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

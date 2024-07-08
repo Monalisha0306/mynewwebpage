@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .workspace {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 200px;
+            background:#b68cb8 ;
+            color: white;
+            float: left;
+            height: 100vh;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .sidebar a.active {
+            background: #c390b5;
+        }
+        .sidebar a:hover {
+            background:#b68cb8 ;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        table th, table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        table th {
+            background: #f4f4f9;
+        }
+        .search-bar {
+            float: right;
+            margin-top: 20px;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="workspace">
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Customers</a>
+            <a href="#" class="active">Departments</a>
+            <a href="#">Media</a>
+            <a href="#" class="active">My Account</a>
+            
+
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <input type="text" placeholder="Search in Departments">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Department ID</th>
+                        <th>Department Incharge</th>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Total Media Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JRYT456</td>
+                        <td>UHDSG</td>
+                        <td>JOHN</td>
+                        <td>23</td>
+                        <td>2 GB</td>
+                    </tr>
+                    <tr>
+                        <td>JHSAG838</td>
+                        <td>ASDFJ</td>
+                        <td>JANE</td>
+                        <td>45</td>
+                        <td>0.4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>ASJHSA77</td>
+                        <td>SAFEF</td>
+                        <td>BOB</td>
+                        <td>76</td>
+                        <td>200 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KSAHJK386</td>
+                        <td>AFEEE</td>
+                        <td>MARY</td>
+                        <td>87</td>
+                        <td>50 GB</td>
+                    </tr>
+                    <tr>
+                        <td>SAKJHD35</td>
+                        <td>REYER</td>
+                        <td>KARAN</td>
+                        <td>76</td>
+                        <td>45 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KKHUASU33</td>
+                        <td>HJHGF</td>
+                        <td>CHRISSY</td>
+                        <td>78</td>
+                        <td>.500 GB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
