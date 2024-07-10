@@ -68,17 +68,17 @@
 <body>
     <div class="workspace">
         <div class="sidebar">
-            <a href="#">Home</a>
-            <a href="#">Customers</a>
-            <a href="#" class="active">Departments</a>
-            <a href="#">Media</a>
-            <a href="#" class="active">My Account</a>
+            <a href="./index.html">Home</a>
+            <a href="./customers.html">Customers</a>
+            <a href="./departments.html" class="active">Departments</a>
+            <a href="./media.html">Media</a>
+            <a href="./myaccount.html" class="active">My Account</a>
             
 
         </div>
         <div class="content">
             <div class="search-bar">
-                <input type="text" placeholder="Search in Departments">
+                <input type="search" placeholder="Search in Departments">
             </div>
             <table>
                 <thead>
@@ -137,6 +137,24 @@
             </table>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', () => {
+    // Search functionality
+    const searchInput = document.querySelector('.search-bar input[type="search"]');
+
+    searchInput.addEventListener('input', event => {
+        const query = event.target.value.toLowerCase();
+        const table = document.querySelector('.content table');
+        const rows = table.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(query));
+            row.style.display = match ? '' : 'none';
+        });
+    });
+});
+
+    </script>
 </body>
 </html>
