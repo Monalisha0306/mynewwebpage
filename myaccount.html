@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
         }
         .sidebar {
             width: 200px;
-            background:#b68cb8 ;
+            background: #b68cb8;
             color: white;
             padding-top: 20px;
             box-sizing: border-box;
@@ -31,7 +31,7 @@
             font-size: 18px;
         }
         .sidebar a.active {
-            background:  #b68cb8;
+            background: #a96aa8;
         }
         .sidebar a:hover {
             background: #d9c1db;
@@ -73,6 +73,14 @@
             height: 100%;
             border-radius: 10px;
         }
+        .edit-button {
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+        }
         .profile-details {
             width: 100%;
             max-width: 500px;
@@ -80,6 +88,7 @@
         }
         .profile-details div {
             margin-bottom: 20px;
+            position: relative;
         }
         .profile-details label {
             display: block;
@@ -92,19 +101,33 @@
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            padding-right: 40px;
         }
-        .edit-button {
+        .edit-icon {
             position: absolute;
-            right: 10px;
+            right: -25px;
             top: 50%;
             transform: translateY(-50%);
+            font-size: 20px;
             cursor: pointer;
         }
-        .edit-button img {
-            width: 20px;
-            height: 20px;
+        .tooltip {
+            display: none;
+            position: absolute;
+            right: -220px;
+            width: 200px;
+            background-color: #f4f4f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .profile-details .save-cancel-buttons {
+        .edit-icon:hover + .tooltip, .tooltip:hover {
+            display: block;
+        }
+        .save-cancel-buttons {
             display: flex;
             justify-content: space-between;
         }
@@ -128,13 +151,11 @@
 <body>
     <div class="workspace">
         <div class="sidebar">
-            <a href="#">Home</a>
-            <a href="#">Customers</a>
-            <a href="#">Departments</a>
-            <a href="#">Media</a>
-            <a href="#" class="active">My Account</a>
-            
-
+            <a href="./index.html">Home</a>
+            <a href="./customers.html">Customers</a>
+            <a href="./departments.html">Departments</a>
+            <a href="./media.html">Media</a>
+            <a href="./myaccount.html" class="active">My Account</a>
         </div>
         <div class="content">
             <div class="search-bar">
@@ -142,38 +163,56 @@
             </div>
             <div class="profile-section">
                 <div class="profile-image">
-                    <img src="placeholder.png" alt="Profile Picture">
-                    <div class="edit-button">
-                        <img src="edit-icon.png" alt="Edit">
-                    </div>
+                    <img src="logo.jpg" alt="Profile Picture">
+                    <div class="edit-button">✏️</div>
                 </div>
                 <div class="profile-details">
                     <div>
                         <label for="name">Name</label>
                         <input type="text" id="name" value="John Doe">
-                        <div class="edit-button">
-                            <img src="edit-icon.png" alt="Edit">
+                        <span class="edit-icon">✏️</span>
+                        <div class="tooltip">
+                            This is an edit button.<br>
+                            On clicking this pencil<br>
+                            symbol, user will be<br>
+                            asked to change<br>
+                            his name with input.
                         </div>
                     </div>
                     <div>
                         <label for="email">Email</label>
                         <input type="text" id="email" value="example@gmail.com">
-                        <div class="edit-button">
-                            <img src="edit-icon.png" alt="Edit">
+                        <span class="edit-icon">✏️</span>
+                        <div class="tooltip">
+                            This is an edit button.<br>
+                            On clicking this pencil<br>
+                            symbol, user will be<br>
+                            asked to change<br>
+                            his email with input.
                         </div>
                     </div>
                     <div>
                         <label for="phone">Phone Number</label>
                         <input type="text" id="phone" value="9134837948">
-                        <div class="edit-button">
-                            <img src="edit-icon.png" alt="Edit">
+                        <span class="edit-icon">✏️</span>
+                        <div class="tooltip">
+                            This is an edit button.<br>
+                            On clicking this pencil<br>
+                            symbol, user will be<br>
+                            asked to change<br>
+                            his phone number with input.
                         </div>
                     </div>
                     <div>
                         <label for="dob">Date of Birth</label>
                         <input type="text" id="dob" value="July 16, 1999">
-                        <div class="edit-button">
-                            <img src="edit-icon.png" alt="Edit">
+                        <span class="edit-icon">✏️</span>
+                        <div class="tooltip">
+                            This is an edit button.<br>
+                            On clicking this pencil<br>
+                            symbol, user will be<br>
+                            asked to change<br>
+                            his date of birth with input.
                         </div>
                     </div>
                     <div class="save-cancel-buttons">
@@ -184,6 +223,5 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
